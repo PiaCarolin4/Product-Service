@@ -8,10 +8,10 @@ import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ProductService {
-    private static List<Product> Products = new ArrayList<>();
+    private static List<Product> products = new ArrayList<>();
 
     static{
-        Products.addAll(
+        products.addAll(
                 List.of(
                         new Product("P001", "Cepillo de bambú", "Cepillo dental ecológico de bambú biodegradable", 1990),
                         new Product("P002", "Bolsas reutilizables", "Set de bolsas reutilizables para compras", 4990),
@@ -68,6 +68,8 @@ public class ProductService {
         );
 
     }
-
+    public static List<Product> findAll() {
+        return products;
+    }
 }
 
